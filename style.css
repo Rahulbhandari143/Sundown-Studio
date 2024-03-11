@@ -1,0 +1,739 @@
+@font-face {
+    font-family: yeah;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: yeah;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: yeah;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: yeah;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+.main{
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    
+}
+
+.page1{
+    min-height:100vh;
+    width: 100%;
+    padding: 0 2vw;
+    position: relative;
+    background-color: #EFEAE3;
+}
+
+nav{
+    padding: 2vw 0;
+    background-color: #EFEAE3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navpart2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.navpart2 h4 a{
+    text-decoration: none;
+    color: #000000bb;
+    position:relative;
+    z-index: 9;
+}
+
+.navpart2 h4{
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    color: #000000bb;
+    font-size: 14px;
+    font-weight: 100;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+
+}
+
+.navpart2 h4::after{
+    content: '';
+    height: 100%;
+    width:100%;
+    border-radius: 50%;
+    left: 0;
+    bottom: -100%;
+    background-color: black;
+    position: absolute;
+    transition: all ease 0.4s;
+}
+
+
+.navpart2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0px;
+}
+
+.navpart2 h4:hover a{
+    color: white;
+    cursor: pointer;
+
+}
+
+.navpart2 h4:hover{
+    cursor: pointer;
+}
+
+
+.center{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 8vh;
+    
+}
+
+.left h3{
+    width: 40vw;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.3vw;
+}
+
+.right h1{
+    font-size: 11vw;
+    width: 40rem;
+    text-align: right;
+    line-height: 8.5vw;
+    padding-right: 3vw;
+    
+}
+
+.heroshape {
+    position:absolute;
+    top: 88vh;
+    right: 0;
+    height: 65vh;
+    width: 50vw;
+    /* background-color: aqua; */
+}
+
+.hero1{
+    background: linear-gradient(to top right,#FE320A,#fa7d4f);
+    height: 100%;
+    width: 100%;
+    right: 0%;
+    border-top-left-radius: 250px;
+    border-bottom-left-radius: 50px;
+   filter: blur(20px);
+   position: absolute;
+}
+
+.hero2{
+    height: 35vw;
+    width: 35vw;
+    right: 0%;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#FE320A,#fa7d4f);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(20px);
+}
+
+.hero3{
+    height: 40vw;
+    width: 40vw;
+    right: 0%;
+    border-radius: 50%;
+    background: linear-gradient(to top right,#FE320A,#fa7d4f);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(20px);
+}
+
+
+
+
+@keyframes anime1{
+    to{
+       transform: translate(50%,50%);
+    }
+    from{
+        transform: translate(5%,-10%);
+    }
+}
+
+@keyframes anime2{
+    from{
+        transform: translate(50%,10%);
+    }
+    to{
+        transform: translate(-20%,0%);
+    }
+}
+
+
+.page1 video{
+    position: relative;
+    width: 100%;
+    margin-top: 4vw;
+    border-radius: 30px;   
+}
+
+
+.page2{
+    background-color: #EFEAE3;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 8vw 0;   
+}
+
+.movingtext{
+    white-space: nowrap;
+    overflow-x:auto ;
+}
+
+.movingtext::-webkit-scrollbar{
+    display: none;
+}
+
+
+.txt{
+    white-space:nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+
+.circle{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #FE320A;
+    margin: 0vw 2vw;
+    margin-bottom: 0.5vw;
+}
+
+.movingtext h1{
+    display: inline-block;
+    font-size: 9vw;
+}
+
+
+@keyframes move{
+    from{
+        transform: translate(0%,0%);
+    }
+    to{
+        transform: translate(-100%,0%);
+    }
+}
+
+
+.pagebtm{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    padding: 4.5vw;
+    z-index: 15;
+}
+
+.pagebtm .pageleft h1{
+    font-size: 4.5vw;
+    line-height: 4.5vw;
+    width: 60vw;
+    padding-left: 6vw;
+   
+}
+
+.pageright{
+    width:25%;
+}
+.pagebtm .pageright img{
+   width: 100%;
+   border-radius: 15px;
+}
+
+.pagebtm .pageright p{
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 4vw;
+}
+
+.page2 .dance{
+    
+        height: 31vw;
+        width: 31vw;
+        border-radius: 50%;
+        background: linear-gradient(to top right,#FE320A,#fa7d4f);
+        position: absolute;
+        top: 60%;
+        left: 28%;
+        z-index: 14;
+        animation-name:dancing;
+        animation-duration: 8s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* filter: blur(20px); */
+    
+}
+
+@keyframes dancing{
+    from{
+        filter: blur(10px);
+        transform: translate(20%,-20% )skew(0);
+    }
+    to{
+        filter: blur(50px);
+        transform: translate(-20%,20% )skew(-15deg);
+    }
+}
+
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+}
+
+
+.elem{
+    height: 115px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #383838 ;
+    border-top: 1px solid #383838;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+    
+
+
+}
+
+.elem .overlay{
+    background-color: orange;
+    top: -100%;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    transition: all ease 0.25s;
+    position: absolute;
+}
+
+.elem h2{
+    font-size: 3.5vw;
+    font-weight: 200;
+    position: relative;
+    z-index: 9;
+}
+
+.elem:hover .overlay{
+    top: 0%;
+}
+
+
+
+
+.fixedimage
+{
+    position: fixed;
+    background-color: whitesmoke;
+    height: 30vw;
+    width: 25vw;
+    top: 25%;
+    left: 55%;
+    z-index: 99;
+    border-radius: 35px;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.page4{
+  min-height: 120vh;
+  width: 100%;
+  background-color: #EFEAE3;
+  padding-left: 3vw;
+  padding-top: 6vw;
+}
+
+.AllProjects{
+
+    padding-left: 1vw;
+    display: flex;
+    align-items: center;
+    height: 7vh;
+    width: 12vw;
+    gap: 1.5vw;
+    border-radius: 20px;
+    font-weight: 100;
+    border: 1px solid black;
+}
+
+
+
+.page4btm{
+
+    background-color: black;
+    border-radius: 20px;
+    height: 60vw;
+    width: 92vw;
+    color: white;
+    margin-top: 10vw;
+    display: flex;
+    margin-right: 2vw;
+}
+
+.left2{
+    height: 100%;
+    width: 60%;
+    padding: 8vw;
+    
+}
+.left2 h1{
+    font-size: 6vw;
+    line-height: 6vw;
+}
+
+.left2 p{
+    padding-top: 4vw;
+    font-size: 1.3vw;
+    font-weight: 100;
+    line-height: 1.7vw;
+    padding-right: 6.5vw;
+}
+
+.left2 .lightclr{
+    opacity: 0.3;
+}
+.right2{
+    height: 60vw;
+    width: 60%;
+    background-image: url("imgx.webp");
+    background-size: cover;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.page5{
+    height: 30vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding-left: 6vw;
+    padding-top: 10vw;
+}
+
+
+.page5 .workwith{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.page5 .workwith .dot{
+    background-color: red;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+}
+
+.page5 .workwith p{
+    font-weight: 100;
+    font-size: 1.4vw;
+}
+
+
+.page6{
+    height: 80vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding-left: 6vw;
+    padding-top: 1vw;
+
+}
+
+.swiper {
+    width: 100%;
+    height: 25vw;
+    
+  }
+
+  .swiper-slide {
+    width: 20vw; 
+    padding: 2vw;
+    font-weight: 100;
+    font-size: 1.4vw;
+    text-align:left;
+    color: rgba(71, 71, 71, 0.763);
+    border-left: 1px solid rgba(148, 148, 148, 0.406);
+    background-color: #EFEAE3;
+    
+  }
+
+  .swiper:hover{
+    cursor: grab;
+  }
+
+
+
+
+.page7{
+    margin-top: 20vw;
+    height: 120vh;
+    width: 100%;
+    
+}
+
+.footer{
+    
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    z-index: 9;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+}
+
+.footer h1{
+    font-size: 23vw;
+    text-align: center;
+    padding-bottom: 0;
+    line-height: 20vw;
+    padding: 0 2vw;
+}
+
+
+.footerup .dancingeffect{
+    z-index: 8;
+    height: 32vh;
+    z-index: 8.9;
+    padding: 0vw 0vw;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.footerup .dancingeffect .de0{
+
+    position: relative;
+    z-index: 9;
+    height: 100%;
+    width: 100%;
+    /* border-bottom-left-radius: 400px;
+    border-bottom-right-radius: 400px; */
+    background: linear-gradient(to top right,#FE320A,#fa7d4f);
+    filter: blur(10px);
+    filter: opacity(100px);
+}
+
+
+
+
+
+.footerup .dancingeffect .de1{
+    position: relative;
+    height: 40vh;
+    width: 50vw;
+    left: -15%;
+    top:-80%;
+    border-radius: 400px;
+    z-index: 9;
+    background: linear-gradient(to top right,#FE320A,#fa7d4f);
+    animation-name: deffect1;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(30px);
+}
+@keyframes deffect1{
+    from{
+       
+        transform: translate(0%,10% )skew(0);
+    }
+    to{
+       
+        transform: translate(0%,-30% )skew(80deg);
+    }
+}
+
+
+.footerup .dancingeffect .de2{
+    position: absolute;
+    height: 38vh;
+    width: 80vw;
+    top: 40%;
+    border-radius: 400px;
+    right: -20%;
+    z-index: 9;
+    background: linear-gradient(to top right,#FE320A,#fa7d4f);
+    animation-name: deffect2;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(40px);
+}
+@keyframes deffect2{
+    from{
+       
+        transform: translate(0,-100% )skew(0);
+    }
+    to{
+       
+        transform: translate(0,0% )skew(80deg);
+    }
+}
+
+.footerdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 100;
+    font-size: 1.3vw;
+    height: 8vh;
+    border-top: 1px solid rgb(132, 129, 129);
+    padding: 2.5vw;
+    color: white;
+    padding: 0 2vw;
+}
+
+.writtenfooter{
+    display: flex;
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    padding: 5vw;
+    gap:55vw;
+    
+}
+
+.leftfooter{
+    font-size: 2.5vw;
+    margin-left: 2vw;
+
+}
+
+.rightfooter{
+    font-weight: 100;
+    font-size: 1.5vw;
+}
+
+.rightfooter input{
+    margin-top: 2vw;
+    height: 2.5vw;
+    color: rgb(40, 135, 189);
+    width: 20vw;
+    padding: 1vw;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(159, 159, 159, 0.61);
+}
+
+.rightfooter input::placeholder{
+    color: rgba(145, 140, 140, 0.632);
+    font-size: 1.3vw;
+    font-weight: 100;
+}
+ 
+
+.loader
+{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 666;
+    top: 0;
+    transition: all ease 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loader h1{
+    font-size: 4vw;
+    position: absolute;
+    color: transparent;
+    background: linear-gradient(to right, orange,orangered);
+    -webkit-background-clip: text;
+    opacity: 0;
+    animation-name:loadanime ;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+
+}
+
+@keyframes loadanime{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+
+.loader h1:nth-child(3){
+    animation-delay:3s;
+}
